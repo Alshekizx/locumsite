@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function OurHrApps() {
   return (
-    <div className="containerDiv flex flex-col items-center justify-center relative" style={{ minHeight: '100vh' }}>
+    <div className="containerDiv flex flex-col items-center justify-center relative" style={{ minHeight: '50vh' }}>
       <div className="flex flex-col lg:flex-row bg-[var(--primary-color)] w-full p-6 rounded-lg  text-white card-texture-bg3 ">
 
   {/* Text Section */}

@@ -3,7 +3,7 @@ import { BriefcaseIcon } from "@heroicons/react/24/solid"; // Importing the bag/
 
 export default function Hero() {
   return (
-    <div className="containerDiv flex flex-col lg:flex-row items-center justify-between gap-10">
+    <div className="containerDiv flex flex-col lg:flex-row items-center justify-between gap-10" style={{ minHeight: '90vh' }}>
       {/* Left Content */}
       <div className="flex flex-col gap-12 items-start w-full lg:w-3/5">
         <div className="LocumTag">

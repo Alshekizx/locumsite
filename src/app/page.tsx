@@ -47,13 +47,13 @@ export default function Home() {
      <WhoWeSupport/>
      <SectorsWeCover/>
      <OurHrApps/>
-     <div  className="flex flex-col items-center gap-6  ">
-              <div className=" flex flex-col items-center text-center w-full max-w-[800px] ">
-               <p className="LocumTag mb-5">How Our Service Benefits You</p>
-               <p className="text-base max-w-[600px]">
-                 Discover the benefits of choosing a locum platform built specifically for healthcare professionals.
-               </p>
-           </div>
+     <div className="flex flex-col items-center gap-6   ">
+            <div className=" flex flex-col items-center text-center w-full max-w-[800px] " style={{ padding: '2rem' }}>
+                  <p className="LocumTag mb-5">How Our Service Benefits You</p>
+                  <p className="text-base">
+                    Discover the benefits of choosing a locum platform built specifically for healthcare professionals.
+                  </p>
+            </div>
              <AnotherHrSectionInverse {...hrData5}/>
       </div>
 

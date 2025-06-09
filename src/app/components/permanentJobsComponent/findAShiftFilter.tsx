@@ -31,9 +31,10 @@ const FindAShiftFilter: React.FC<FindAShiftFilterProps> = ({
 
   return (
     <div className="w-full">
-      {/* Mobile Toggle Button */}
-      <div className="md:hidden flex justify-between items-center px-4 py-2 bg-[var(--secondary-100)]">
       <span className="hidden lg:block text-white font-semibold">Find a shift</span>
+      {/* Mobile Toggle Button */}
+      <div className="lg:hidden flex justify-between items-center px-4 py-2 bg-[var(--secondary-100)]">
+      
 
         <button
           onClick={() => setShowFilters(!showFilters)}
@@ -48,7 +49,7 @@ const FindAShiftFilter: React.FC<FindAShiftFilterProps> = ({
       <div
         className={`${
           showFilters ? 'block' : 'hidden'
-        } md:flex flex-col md:flex-row gap-4 justify-between items-end w-full px-4 md:px-10 py-4 bg-[var(--secondary-100)]`}
+        } lg:flex flex-col flex-wrap md:flex-row gap-4 justify-between items-end w-full px-4 md:px-10 py-4 bg-[var(--secondary-100)]`}
       >
         {/* Profession */}
         <div className="flex flex-col w-full md:w-auto">

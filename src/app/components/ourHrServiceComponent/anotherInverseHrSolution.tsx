@@ -33,7 +33,7 @@ export default function AnotherHrSectionInverse({
 
   return (
     <section
-      className="bg-[var(--background-light)] containerDiv  py-12"
+      className="bg-[var(--background-light)] containerDiv  py-2"
       style={{ minHeight: '50px' }}
     >
       <div className="flex flex-col-reverse md:flex-row gap-10 items-center md:items-start justify-between">
@@ -48,7 +48,7 @@ export default function AnotherHrSectionInverse({
               alt={title || 'Section Image'}
               width={600}
               height={600}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain lg:object-cover"
             />
           )}
         </div>
