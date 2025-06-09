@@ -1,0 +1,412 @@
+@import "tailwindcss";
+
+
+
+
+:root {
+  
+  --header-color: #f7f8fd; /* Light greenish background for headers */
+  --primary-color: #2F7553;;
+
+  /* Tints: lighter versions of the primary color */
+  --primary-100: #D9F1E4; /* very light tint */
+  --primary-200: #A9DEC5; /* soft mint tint */
+  --primary-300: #7FCCAB; /* medium-light green */
+  --primary-400: #5BB88E; /* slightly darker green tint */
+  --primary-500: #57cf39; 
+
+  /* Translucent version of the primary color */
+  --primaryTrans-color: #368B6266; /* ~40% opacity */
+
+
+  --secondary-color: #6C757D; 
+  --secondary-100: #F1F3F5;
+  --secondary-200: #D7DBDF;
+  --secondary-300: #ADB5BD;
+  --secondary-400: #868E96;
+ 
+
+  --background-light: linear-gradient(
+    135deg,
+    #e6f7ef 0%,
+    #d1f0e1 30%,
+    #e6f7ef 60%,
+    #cde8da 100%
+  ); /* soft greenish background */
+
+  --text-dark: #1f332b;  /* Dark green-gray for strong text */
+  --text-muted: #5c796c;  /* Muted earthy green-gray */
+  --card-bg: #ffffff;
+  --card-Trans: #E6F2ED80;
+  --border-color: #b5dbc9;  /* soft greenish border */
+  --accent-color: #01812A;  /* Strong green accent */
+  --background: #e2f3eb;
+  --foreground: #111111;
+}
+
+body {
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-text: var(--text-dark);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-trans: var(--card-Trans);
+  --color-border: var(--border-color);
+
+  --color-header: var(--header-color);
+  
+  /* Primary Colors */
+  --color-primary: var(--primary-color);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-color);
+  --color-primaryTrans: var(--primaryTrans-color);
+
+  /* Secondary Colors */
+  --color-secondary: var(--secondary-color);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-color);
+  --color-accent: var(--accent-color);
+ 
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+  --header-color: #E6F2ED; /* Light greenish background for headers */
+  --primary-color: #368B62;
+
+  /* Tints: lighter versions of the primary color */
+  --primary-100: #D9F1E4; /* very light tint */
+  --primary-200: #A9DEC5; /* soft mint tint */
+  --primary-300: #7FCCAB; /* medium-light green */
+  --primary-400: #5BB88E; /* slightly darker green tint */
+
+  /* Translucent version of the primary color */
+  --primaryTrans-color: #368B6266; /* ~40% opacity */
+
+  --secondary-color: #6C757D; 
+  --secondary-100: #F1F3F5;
+  --secondary-200: #D7DBDF;
+  --secondary-300: #ADB5BD;
+  --secondary-400: #868E96;
+
+  --background-light: linear-gradient(
+    135deg,
+    #e6f7ef 0%,
+    #d1f0e1 30%,
+    #e6f7ef 60%,
+    #cde8da 100%
+  ); /* soft greenish background */
+
+  --text-dark: #1f332b;  /* Dark green-gray for strong text */
+  --text-muted: #5c796c;  /* Muted earthy green-gray */
+  --card-bg: #ffffff;
+  --card-Trans: #E6F2ED80;
+  --border-color: #b5dbc9;  /* soft greenish border */
+  --accent-color: #01812A;  /* Strong green accent */
+  --background: #e2f3eb;
+  --foreground: #111111;
+}
+
+  }
+
+
+
+h1, h2{
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 3rem; /* Increased from 2.5rem */
+}
+
+h2 {
+  font-size: 2.5rem; /* Increased from 2rem */
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 2rem; 
+   font-weight: 400;
+}
+
+p {
+  font-size: 1.125rem; /* Increased from 1rem */
+}
+ .links{
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 5px 0 ;
+  border-bottom: solid 2px transparent;
+ }
+  .links:hover {
+    color: var(--primary-color);
+    border-bottom: solid 2px var(--primary-color);
+  }
+
+   .footerLinks{
+  color: white;
+  text-decoration: none;
+ }
+  .footerLinks:hover{
+    text-decoration: underline;
+  }
+
+
+.button,
+.inverseButton {
+  font-size: 1rem; 
+  font-weight: 500;
+}
+
+
+
+.button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-400);
+  
+}
+
+.inverseButton {
+  
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border: solid 1px var(--primary-color);
+  border-radius: 2rem;
+  cursor: pointer;
+ 
+  transition: background-color 0.3s ease;
+}
+
+.inverseButton:hover {
+  background-color: var(--primary-400);
+  color: #fff;
+}
+
+
+.IconButton {
+  background-color: var(--primary-100);
+  color: var(--primary-color);
+  padding: 0.75rem ;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.IconButton:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.callToActionButton {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.callToActionButton:hover {
+  background-color: var(--accent-color);
+  color:  #ffffff;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.card2 {
+  background-color: var(--card-bg);
+  padding: 5rem 2rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.modalCard {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+.modalCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+.flatCard{
+  max-width: 1000px;
+  
+}
+
+.containerDiv{
+  padding: 2rem 5rem;
+  min-height: 90vh;
+  width: 100%;
+  
+}
+
+@media (max-width: 768px) {
+  .containerDiv {
+    padding: 2rem;
+  }
+}
+
+.bg_themed_color{
+  background-image: var(--background-light);;
+}
+
+.inner_Padding{
+  padding: 5rem 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+::-webkit-scrollbar {
+  height: 8px;       /* for horizontal scrollbar */
+  width: 8px;        /* for vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-400);  /* Customize to match your theme */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color:var(--secondary-400);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;              /* auto | thin | none */
+  scrollbar-color: var(--secondary-400) #f0f0f0;   /* thumb color + track color */
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.card-texture-bg {
+  background-image: url('/images/cardtexture3.png');
+  background-size: 120%;
+  background-position: center;
+}
+
+.card-texture-bg2 {
+  background-image: url('/images/cardtextur2.png');
+  background-size: 120%;
+  background-position: center;
+}
+
+.card-texture-bg3 {
+  background-image: url('/images/cardtexture.png');
+  background-size: 120%;
+  background-position: center;
+}
+.custom-ring-color {
+  --tw-ring-color: var(--primary-color);
+  outline: none;
+  background-color: white;
+ 
+}
+
+.custom-ring-color:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--tw-ring-color); /* this mimics `focus:ring-2` */
+}
+
+.LocumTag{
+  background-color: var(--secondary-100);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border: solid 1px var(--primary-color);
+  border-radius: 50px;
+  font-weight: 600;
+  
+  transition: background-color 0.3s ease;
+}
+
+.bg-hero-locum {
+  background-image: url('/images/locum-bg.png'); /* adjust path based on your public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-placeholder::placeholder {
+  color: var(--primary-400); /* This assumes --primary-400 is defined globally */
+}
