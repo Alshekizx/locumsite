@@ -40,7 +40,7 @@ export default function LoginPage() {
       {/* Right side */}
       <div className="flex items-center justify-center px-6 py-12 bg-white">
         <div className="w-full max-w-sm">
-          <h3 className="text-2xl font-semibold text-center text-[var(--primary-color)] mb-8">Account Setup</h3>
+          <h3 className="text-2xl font-semibold text-center text-[var(--primary-color)] mb-8">Login</h3>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email */}

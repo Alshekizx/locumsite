@@ -194,7 +194,7 @@ const stepIndicator = (current: number) => {
   return (
      <main className="min-h-screen grid grid-cols-1 pt-16 md:grid-cols-2">
       {/* Left side */}
-      <div className="relative bg-[var(--primary-color)] flex items-center justify-center p-6 card-texture-bg2"
+      <div className="relative bg-[var(--primary-color)] min-h-50 flex items-center justify-center p-6 card-texture-bg2"
       
       >
         <div className="absolute top-6 left-6">
