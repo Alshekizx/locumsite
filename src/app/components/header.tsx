@@ -95,12 +95,12 @@ export default function Header() {
     ) : (
       <div className='flex flex-row items-center gap-2'>
         <Link href="/auth/signup" >
-        <div className=" inverseButton" style={{borderRadius:"0", borderWidth:' 1px',padding: '5px 20px'}}>
+        <div className=" inverseButton" style={{borderRadius:"0", borderWidth:' 1px',padding: '5px 10px'}}>
         Register
         </div>
       </Link>
         <Link href="/auth/login" >
-        <div className=" button" style={{ borderRadius:"0", borderWidth:' 1px',padding: '5px 20px' }}>
+        <div className=" button" style={{ borderRadius:"0", borderWidth:' 1px',padding: '5px 10px' }}>
           Login
           </div>
         </Link>
@@ -168,16 +168,16 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
     <header className="bg-[var(--header-color)] text-[var(--text-dark)] border-b border-[var(--border-color)] fixed top-0 w-full z-50">
       <div className="px-4 py-4 flex justify-between items-center">
         {/* Logo and Icons */}
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center ">
           <HomeIcon className="h-8 w-8 text-[var(--primary-color)]" />
-          <ChevronRightIcon className="h-6 w-6 mr-4 text-[var(--text-muted)]" />
-          <Link href="/" className="flex items-center space-x-2">
+          <ChevronRightIcon className="h-6 w-6 mr-1 text-[var(--text-muted)]" />
+          <Link href="/" className="flex items-center w-30">
             <Image
               src="/logos/MployusLocumsLogo1.png"
               alt="Logo"
               width={120}
               height={120}
-              className="object-contain"
+              className="w-full"
             />
           </Link>
         </div>
