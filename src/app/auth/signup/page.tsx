@@ -240,7 +240,7 @@ const stepIndicator = (current: number) => {
     <h3 className="text-2xl font-semibold text-center text-[var(--primary-color)] mb-4">Account Setup</h3>
      
     <div>
-      <label className="block mb-1 font-semibold">Country:</label>
+      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Country:</label>
       <div className="relative w-full">
         {/* Flag inside the select border */}
         {flagUrl && (
@@ -261,7 +261,7 @@ const stepIndicator = (current: number) => {
         <select
           value={selectedCountry}
           onChange={(e) => setSelectedCountry(e.target.value)}
-          className="w-full border pl-10 py-3 rounded custom-ring-color bg-white"
+          className="w-full border border-[var(--secondary-400)] rounded-md pl-10 pr-4 py-3 text-sm custom-ring-color"
         >
           {countries.map((country) => (
             <option key={country} value={country}>
@@ -276,12 +276,12 @@ const stepIndicator = (current: number) => {
 
              {selectedCountry === "Republic of Ireland" && (
                <div>
-                 <label className="block mb-1 font-semibold">Profession:</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Profession:</label>
                  {/* The select dropdown */}
                   <select
                     value={republicOfIrelandList}
                     onChange={(e) => setRepublicOfIrelandList(e.target.value)}
-                    className="w-full mb-4 border p-3 rounded custom-ring-color bg-white"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   >
                     {republicOfIrelandProfessions.map((republicOfIrelandProfession) => (
                       <option key={republicOfIrelandProfession} value={republicOfIrelandProfession}>
@@ -291,28 +291,28 @@ const stepIndicator = (current: number) => {
                   </select>
 
                   {republicOfIrelandList === "Locum Pharmacist" && (
-                      <div>
-                      <label className="block font-semibold">PSNI Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">PSNI Number:</label>
                       <input
                         type="text"
                         name="PSNI_Number"
                         value={formData.PSNI_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter PSNI Number"
                       />
                     </div>
                     )}
 
                     {republicOfIrelandList === "Locum GP" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">IMC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">IMC Number:</label>
                       <input
                         type="text"
                         name="IMC_Number"
                         value={formData.IMC_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter IMC Number"
                       />
                     </div>
@@ -320,14 +320,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {republicOfIrelandList === "Agency Nurse" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">NMBI Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">NMBI Number:</label>
                       <input
                         type="text"
                         name="NMBI_Number"
                         value={formData.NMBI_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter NMBI Number"
                       />
                     </div>
@@ -335,14 +335,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {republicOfIrelandList === "Locum Optician" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">CORURegistrationNumber:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">CORURegistrationNumber:</label>
                       <input
                         type="text"
                         name="CORURegistrationNumber"
                         value={formData.CORURegistrationNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter CORU Registration Number"
                       />
                     </div>
@@ -354,12 +354,12 @@ const stepIndicator = (current: number) => {
 
               {selectedCountry === "Northern Ireland" && (
                <div>
-                 <label className="block mb-1 font-semibold">Profession:</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Profession:</label>
                  {/* The select dropdown */}
                   <select
                     value={northernIrelandList}
                     onChange={(e) => setNorthernIrelandList(e.target.value)}
-                    className="w-full mb-4 border p-3 rounded custom-ring-color bg-white"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   >
                     {northernIrelandProfessions.map((northernIrelandProfession) => (
                       <option key={northernIrelandProfession} value={northernIrelandProfession}>
@@ -369,28 +369,28 @@ const stepIndicator = (current: number) => {
                   </select>
 
                      {northernIrelandList === "Locum Pharmacist" && (
-                      <div>
-                      <label className="block font-semibold">PSNI Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">PSNI Number:</label>
                       <input
                         type="text"
                         name="PSNI_Number"
                         value={formData.PSNI_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter PSNI Number"
                       />
                     </div>
                     )}
 
                     {northernIrelandList === "Locum GP" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GMC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GMC Number:</label>
                       <input
                         type="text"
                         name="GMC_Number"
                         value={formData.GMC_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GMC Number"
                       />
                     </div>
@@ -398,14 +398,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {northernIrelandList === "Agency Nurse" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">NMC PIN:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">NMC PIN:</label>
                       <input
                         type="text"
                         name="NMC_PIN"
                         value={formData.NMC_PIN}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter NMC PIN"
                       />
                     </div>
@@ -413,14 +413,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {northernIrelandList === "Optometrist" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GOC Registration Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GOC Registration Number:</label>
                       <input
                         type="text"
                         name="GOCRegistrationNumber"
                         value={formData.GOCRegistrationNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GOC Registration Number"
                       />
                     </div>
@@ -432,12 +432,12 @@ const stepIndicator = (current: number) => {
 
               {selectedCountry === "England" && (
                <div>
-                 <label className="block mb-1 font-semibold">Profession:</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Profession:</label>
                  {/* The select dropdown */}
                   <select
                     value={englandList}
                     onChange={(e) => setEnglandList(e.target.value)}
-                    className="w-full mb-4 border p-3 rounded custom-ring-color bg-white"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   >
                     {englandProfessions.map((englandProfession) => (
                       <option key={englandProfession} value={englandProfession}>
@@ -447,28 +447,28 @@ const stepIndicator = (current: number) => {
                   </select>
 
                    {englandList === "Locum Pharmacist" && (
-                      <div>
-                      <label className="block font-semibold">GPhC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GPhC Number:</label>
                       <input
                         type="text"
                         name="GPhCNumber"
                         value={formData.GPhCNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GPhC Number"
                       />
                     </div>
                     )}
 
                     {englandList === "Locum GP" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GMC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GMC Number:</label>
                       <input
                         type="text"
                         name="GMC_Number"
                         value={formData.GMC_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GMC Number"
                       />
                     </div>
@@ -476,14 +476,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {englandList === "Agency Nurse" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">NMC PIN:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">NMC PIN:</label>
                       <input
                         type="text"
                         name="NMC_PIN"
                         value={formData.NMC_PIN}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter NMC PIN"
                       />
                     </div>
@@ -491,14 +491,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {englandList === "Optometrist" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GOC Registration Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GOC Registration Number:</label>
                       <input
                         type="text"
                         name="GOCRegistrationNumber"
                         value={formData.GOCRegistrationNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GOC Registration Number"
                       />
                     </div>
@@ -509,12 +509,12 @@ const stepIndicator = (current: number) => {
 
               {selectedCountry === "Scotland" && (
                <div>
-                 <label className="block mb-1 font-semibold">Profession:</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Profession:</label>
                  {/* The select dropdown */}
                   <select
                     value={scotlandList}
                     onChange={(e) => setScotlandList(e.target.value)}
-                    className="w-full mb-4 border p-3 rounded custom-ring-color bg-white"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   >
                     {scotlandProfessions.map((scotlandProfession) => (
                       <option key={scotlandProfession} value={scotlandProfession}>
@@ -524,28 +524,28 @@ const stepIndicator = (current: number) => {
                   </select>
 
                      {scotlandList === "Locum Pharmacist" && (
-                      <div>
-                      <label className="block font-semibold">GPhC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GPhC Number:</label>
                       <input
                         type="text"
                         name="GPhCNumber"
                         value={formData.GPhCNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GPhC Number"
                       />
                     </div>
                     )}
 
                     {scotlandList === "Locum GP" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GMC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GMC Number:</label>
                       <input
                         type="text"
                         name="GMC_Number"
                         value={formData.GMC_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GMC Number"
                       />
                     </div>
@@ -553,14 +553,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {scotlandList === "Agency Nurse" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">NMC PIN:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">NMC PIN:</label>
                       <input
                         type="text"
                         name="NMC_PIN"
                         value={formData.NMC_PIN}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter NMC PIN"
                       />
                     </div>
@@ -568,14 +568,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {scotlandList === "Optometrist" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GOC Registration Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GOC Registration Number:</label>
                       <input
                         type="text"
                         name="GOCRegistrationNumber"
                         value={formData.GOCRegistrationNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GOC Registration Number"
                       />
                     </div>
@@ -587,12 +587,12 @@ const stepIndicator = (current: number) => {
 
               {selectedCountry === "Wales" && (
                <div>
-                 <label className="block mb-1 font-semibold">Profession:</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Profession:</label>
                  {/* The select dropdown */}
                   <select
                     value={walesList}
                     onChange={(e) => setWalesList(e.target.value)}
-                    className="w-full mb-4 border p-3 rounded custom-ring-color bg-white"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   >
                     {walesProfessions.map((walesProfession) => (
                       <option key={walesProfession} value={walesProfession}>
@@ -602,28 +602,28 @@ const stepIndicator = (current: number) => {
                   </select>
 
                         {walesList === "Locum Pharmacist" && (
-                      <div>
-                      <label className="block font-semibold">GPhC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GPhC Number:</label>
                       <input
                         type="text"
                         name="GPhCNumber"
                         value={formData.GPhCNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GPhC Number"
                       />
                     </div>
                     )}
 
                     {walesList === "Locum GP" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GMC Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GMC Number:</label>
                       <input
                         type="text"
                         name="GMC_Number"
                         value={formData.GMC_Number}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GMC Number"
                       />
                     </div>
@@ -631,14 +631,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {walesList === "Agency Nurse" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">NMC PIN:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">NMC PIN:</label>
                       <input
                         type="text"
                         name="NMC_PIN"
                         value={formData.NMC_PIN}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter NMC PIN"
                       />
                     </div>
@@ -646,14 +646,14 @@ const stepIndicator = (current: number) => {
                     )}
 
                     {walesList === "Optometrist" && (
-                      <div>
-                      <label className="block mb-1 font-semibold">GOC Registration Number:</label>
+                      <div className="mt-4" >
+                      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">GOC Registration Number:</label>
                       <input
                         type="text"
                         name="GOCRegistrationNumber"
                         value={formData.GOCRegistrationNumber}
                         onChange={handleChange}
-                        className="w-full border p-3 rounded custom-ring-color bg-white"
+                        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                         placeholder="Enter GOC Registration Number"
                       />
                     </div>
@@ -666,25 +666,25 @@ const stepIndicator = (current: number) => {
 
   
              <div>
-                 <label className="block mb-1 font-semibold">Create Password</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Create Password</label>
                  <input
                    type="password"
                    name="password"
                    value={formData.password}
                    onChange={handleChange}
-                   className="w-full border p-3 rounded custom-ring-color bg-white"
+                   className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                    placeholder="Enter password"
                  />
                </div>
 
                 <div>
-                 <label className="block mb-1 font-semibold">Confirm Password:</label>
+                 <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Confirm Password:</label>
                  <input
                    type="password"
                    name="confirmPassword"
                    value={formData.confirmPassword}
                    onChange={handleChange}
-                   className="w-full border p-3 rounded custom-ring-color bg-white"
+                   className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                    placeholder="Enter password"
                  />
                </div>
@@ -704,72 +704,72 @@ const stepIndicator = (current: number) => {
 
               <div className='flex flex-row gap-4 w-full'>
                   <div className='w-1/2'>
-                    <label className="block mb-1 font-semibold">First Name:</label>
+                    <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">First Name:</label>
                     <input
                       type="text"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder="Enter your first name"
-                      className="w-full border p-3 rounded custom-ring-color"
+                      className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                     />
                   </div>
 
                   <div className='w-1/2'>
-                    <label className="block mb-1 font-semibold">Last Name:</label>
+                    <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Last Name:</label>
                     <input
                       type="text"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Enter your last name"
-                      className="w-full border p-3 rounded custom-ring-color"
+                      className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                     />
                   </div>
               </div>
                 <div>
-                  <label className="block mb-1 font-semibold">Email:</label>
+                  <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Email:</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
-                    className="w-full border p-3 rounded custom-ring-color"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold">Mobile Number:</label>
+                  <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Mobile Number:</label>
                   <input
                     type="tel"
                     name="mobile"
                     value={formData.mobile}
                     onChange={handleChange}
                     placeholder="Enter your mobile number"
-                    className="w-full border p-3 rounded custom-ring-color"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold">Date of Birth:</label>
+                  <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Date of Birth:</label>
                   <input
                     type="date"
                     name="dob"
                     value={formData.dob}
                     onChange={handleChange}
-                    className="w-full border p-3 rounded custom-ring-color"
+                    className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-1 font-semibold">Country:</label>
+                  <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Country:</label>
                   <div >
                     <select
                       name="country"
                       value={formData.country}
                       onChange={handleChange}
-                      className="w-full border p-3 rounded custom-ring-color"
+                      className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
                     >
                       <option value="">Select a country</option>
                       {[
@@ -820,7 +820,7 @@ const stepIndicator = (current: number) => {
       value={formData.verificationCode}
       onChange={handleChange}
       placeholder="_ _ _ _"
-      className="w-full border p-3 rounded custom-ring-color tracking-widest"
+      className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color tracking-widest"
     />
 
         <button
@@ -847,58 +847,58 @@ const stepIndicator = (current: number) => {
          Address Details
        </h3>
     <div>
-      <label className="block mb-1 font-semibold">Address 1:</label>
+      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Address 1:</label>
       <input
         type="text"
         name="address1"
         value={formData.address1 || ''}
         onChange={handleChange}
         placeholder="Street address or P.O. Box"
-        className="w-full border p-3 rounded custom-ring-color"
+        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
       />
     </div>
     <div>
-      <label className="block mb-1 font-semibold">Address 2:</label>
+      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Address 2:</label>
       <input
         type="text"
         name="address2"
         value={formData.address2 || ''}
         onChange={handleChange}
         placeholder="Apartment, suite, unit, building, floor, etc."
-        className="w-full border p-3 rounded custom-ring-color"
+        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
       />
     </div>
     <div>
-      <label className="block mb-1 font-semibold">Town/City:</label>
+      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Town/City:</label>
       <input
         type="text"
         name="city"
         value={formData.city || ''}
         onChange={handleChange}
         placeholder="enter city or town"
-        className="w-full border p-3 rounded custom-ring-color"
+        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
       />
     </div>
     <div>
-      <label className="block mb-1 font-semibold">County / Region:</label>
+      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">County / Region:</label>
       <input
         type="text"
         name="region"
         value={formData.region || ''}
         onChange={handleChange}
         placeholder="enter region"
-        className="w-full border p-3 rounded custom-ring-color"
+        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
       />
     </div>
     <div>
-      <label className="block mb-1 font-semibold">Post Code:</label>
+      <label className="block text-sm font-medium text-[var(--text-dark)] mb-1">Post Code:</label>
       <input
         type="text"
         name="postalCode"
         value={formData.postalCode || ''}
         onChange={handleChange}
         placeholder="e.g. 100001"
-        className="w-full border p-3 rounded custom-ring-color"
+        className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
       />
     </div>
     <button

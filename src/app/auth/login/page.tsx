@@ -52,7 +52,7 @@ export default function LoginPage() {
                 type="email"
                 id="email"
                 placeholder="Enter your email"
-                className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
               />
             </div>
 
@@ -65,7 +65,7 @@ export default function LoginPage() {
                 type="password"
                 id="password"
                 placeholder="Enter your password"
-                className="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                className="w-full border border-[var(--secondary-400)] rounded-md px-4 py-3 text-sm custom-ring-color"
               />
             </div>
 
