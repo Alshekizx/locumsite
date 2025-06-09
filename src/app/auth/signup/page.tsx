@@ -176,7 +176,7 @@ const stepIndicator = (current: number) => {
           return (
             <div key={num} className="flex flex-col items-center w-1/3">
               <div className={`${baseCircle} ${circleState}`}>{num}</div>
-              <span className={`text-sm mt-1 transition-colors ${textColor}`}>
+              <span className={`text-sm mt-1 text-center transition-colors ${textColor}`}>
                 {num === 1
                   ? 'Account Setup'
                   : num === 2
