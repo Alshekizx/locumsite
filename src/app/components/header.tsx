@@ -93,7 +93,7 @@ export default function Header() {
         )}
       </div>
     ) : (
-      <div className='flex flex-row items-center gap-2'>
+      <div className='flex flex-row items-center gap-1'>
         <Link href="/auth/signup" >
         <div className=" inverseButton" style={{borderRadius:"5px", borderWidth:' 1.5px',padding: '5px 10px', borderColor: 'var(--secondary-200),', color: 'var(--secondary-400)'}}>
         Register
@@ -183,7 +183,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         </div>
 
         {/* User Icon & Mobile Menu Toggle */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-1">
           <div className="lg:hidden md:hidden sm:flex text-[var(--text-muted)] text-lg">
             <UserIcon />
           </div>

@@ -14,23 +14,25 @@ export default function OurHrApps() {
     </p>
 
   <div className="flex space-x-4">
-  <Link href="#" className="text-white hover:text-gray-300 transition">
-    <div className="relative w-[180px] h-[60px]">
+  <Link href="#" className="">
+    <div className="relative w-full ">
       <Image
         src="/images/GooglePlay.png"
         alt="Google Play"
-        fill
-        className="object-contain"
+        width={150}
+        height={70}
+        className="w-full h-auto"
       />
     </div>
   </Link>
-  <Link href="#" className="text-white hover:text-gray-300 transition">
-    <div className="relative w-[180px] h-[60px]">
+  <Link href="#" className="">
+    <div className="relative w-full">
       <Image
         src="/images/Apple.png"
         alt="Apple Store"
-        fill
-        className="object-contain"
+        width={150}
+        height={70}
+        className="w-full h-auto"
       />
     </div>
   </Link>
