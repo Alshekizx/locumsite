@@ -95,12 +95,12 @@ export default function Header() {
     ) : (
       <div className='flex flex-row items-center gap-2'>
         <Link href="/auth/signup" >
-        <div className=" inverseButton" style={{borderRadius:"0", borderWidth:' 1px',padding: '5px 10px'}}>
+        <div className=" inverseButton" style={{borderRadius:"5px", borderWidth:' 1.5px',padding: '5px 10px', borderColor: 'var(--secondary-200),', color: 'var(--secondary-400)'}}>
         Register
         </div>
       </Link>
         <Link href="/auth/login" >
-        <div className=" button" style={{ borderRadius:"0", borderWidth:' 1px',padding: '5px 10px' }}>
+        <div className=" button" style={{ borderRadius:"5px", borderWidth:' 1.5px',padding: '5px 10px'}}>
           Login
           </div>
         </Link>
@@ -113,7 +113,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
   const isActive = (path: string) => pathname === path;
 
   const linkClass = (path: string) =>
-    `  transition pb-2 ${isActive(path) ? 'text-[var(--primary-color)]  border-b-2 border-[var(--primary-color)] ' : ''}`;
+    `  transition pb-1 ${isActive(path) ? 'text-[var(--primary-color)]  border-b-2 border-[var(--primary-color)] ' : ''}`;
 
   return (
     <>
