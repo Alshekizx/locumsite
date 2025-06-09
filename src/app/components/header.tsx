@@ -197,8 +197,10 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-[var(--text-muted)] text-base">
-          <NavLinks />
+       <nav className="hidden md:flex overflow-x-auto scrollbar-hide">
+          <div className="flex space-x-6 text-[var(--text-muted)] text-base whitespace-nowrap px-2">
+            <NavLinks />
+          </div>
         </nav>
 
         {/* Desktop User Icon */}
