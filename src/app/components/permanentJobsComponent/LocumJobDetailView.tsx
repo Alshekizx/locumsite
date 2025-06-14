@@ -15,21 +15,21 @@ interface Props {
 
 const LocumJobDetailView: React.FC<Props> = ({ job }) => {
   return (
-    <div className="p-6 rounded-md bg-white space-y-6">
+    <div className="p-6 overflow-y-auto scrollbar-hide h-[85vh] rounded-md bg-white space-y-6">
       {/* Job Title and Header */}
       <div>
-        <span className="text-sm text-gray-500">{job.companyName}</span>
+        <span className="text-sm text-[var(--secondary-400)] ">{job.companyName}</span>
         <h3 className="text-[var(--primary-color)] text-xl font-semibold">{job.positionName}</h3>
       </div>
 
       {/* Country, Rate and Share Button */}
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div className="flex gap-2 text-sm">
-          <span className="bg-[var(--secondary-200)] flex items-center justify-between gap-2 text-gray-800 px-5 py-2 rounded-md">
+          <span className="bg-[var(--secondary-200)] flex items-center justify-between gap-2 text-[var(--secondary-400)]  px-5 py-2 rounded-md">
             <MapPinIcon className="h-5 w-5 text-[var(--secondary-color)]" />
             {job.country}
           </span>
-          <span className="bg-[var(--secondary-200)] flex items-center justify-between gap-2 text-gray-800 px-5 py-2 rounded-md">
+          <span className="bg-[var(--secondary-200)] flex items-center justify-between gap-2 text-[var(--secondary-400)]  px-5 py-2 rounded-md">
             <CurrencyDollarIcon className="h-5 w-5 text-[var(--secondary-color)]" /> 
             {job.ratePerHour} / hr
           </span>
@@ -61,7 +61,7 @@ const LocumJobDetailView: React.FC<Props> = ({ job }) => {
           </div>
           <div>
               <p>{job.time} ({job.hours} hrs)</p>
-              <p className="text-xs text-gray-500">{job.unpaidMinutes} min break (unpaid)</p>
+              <p className="text-xs text-[var(--secondary-400)] ">{job.unpaidMinutes} min break (unpaid)</p>
           </div>
         </div>
         <hr />
@@ -75,7 +75,7 @@ const LocumJobDetailView: React.FC<Props> = ({ job }) => {
           </div>
             <div>
               <p>{job.ratePerHour}</p>
-              <p className="text-xs text-gray-500">Total Pay: {job.totalPay}</p>
+              <p className="text-xs text-[var(--secondary-400)] ">Total Pay: {job.totalPay}</p>
             </div>
         </div>
         <hr />

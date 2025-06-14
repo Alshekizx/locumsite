@@ -58,7 +58,7 @@ export default function SectorsWeCover() {
       </div>
 
       <div className="w-full overflow-x-auto scrollbar-hide" ref={containerRef}>
-        <div className="flex gap-6 w-max">
+        <div className="flex gap-10 w-max">
           {services.map((service, index) => (
             <div key={index}>
               <div className="relative rounded-lg overflow-hidden min-w-[250px] h-[400px]">

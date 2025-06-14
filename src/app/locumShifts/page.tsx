@@ -6,6 +6,7 @@ import { LocumJobs, LocumJob } from "../components/permanentJobsComponent/locumJ
 import CountryFilter from "../components/permanentJobsComponent/CountryFilter";
 import FindAShiftFilter from "../components/permanentJobsComponent/findAShiftFilter";
 import Pagination from "../components/pagination";
+import StickyBox from 'react-sticky-box';
 
 const LocumShift = () => {
   const [selectedJob, setSelectedJob] = useState<LocumJob | null>(LocumJobs[0]);
@@ -83,7 +84,7 @@ const LocumShift = () => {
   };
 
       const [currentPage, setCurrentPage] = useState(1);
-      const jobsPerPage = 5;
+      const jobsPerPage = 10;
 
       const filteredJobs = getFilteredJobs();
       const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
@@ -177,10 +178,15 @@ const LocumShift = () => {
           onPageChange={onPageChange}
         />
         </div>
-
+          
         {/* Job Detail */}
         <div className="md:w-1/2">
+          <StickyBox offsetTop={60} offsetBottom={0}>
+        {/* Job Detail */}
+        
           {selectedJob && <LocumJobDetailView job={selectedJob} />}
+        
+        </StickyBox>
         </div>
       </div>
     </div>

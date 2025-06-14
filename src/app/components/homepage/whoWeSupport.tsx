@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function WhoWeSupport() {
   return (
-    <div className="containerDiv flex flex-col lg:flex-row items-center justify-between gap-10 px-4 py-10">
+    <div className="containerDiv flex flex-col lg:flex-row items-center justify-between lg:gap-30 gap-10 px-4 py-10">
       {/* Image Section */}
-      <div className="w-full lg:w-1/3 relative h-[400px]">
+      <div className="w-full lg:w-4/10 relative h-[400px]">
         <Image
           src="/images/doctor-standing-hospital-premises1.png"
           alt="Who We Support"
@@ -14,7 +14,7 @@ export default function WhoWeSupport() {
       </div>
 
       {/* Text Section */}
-      <div className="w-full lg:w-2/3 flex flex-col items-start py-6 sm:py-10">
+      <div className="w-full lg:w-6/10 flex flex-col items-start py-6 sm:py-10">
         <div className="LocumTag mb-6 flex flex-row items-center">
           <Image
             src="/images/doctorStuff.png"

@@ -44,7 +44,7 @@ export default function TestimonialSection() {
         </p>
       </div>
 
-      <div className="flex overflow-x-auto scrollbar-hide gap-6 py-10 px-4 md:px-0">
+      <div className="flex justify-center items-center overflow-x-auto scrollbar-hide gap-6 py-10 px-4 md:px-0">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}

@@ -127,29 +127,28 @@ body {
 
 
 
-h1, h2{
+h1, h2 {
   font-weight: 500;
   line-height: 1.2;
-  color: var(--text-dark);
 }
 
 h1 {
-  font-size: 3rem; /* Increased from 2.5rem */
+  font-size: clamp(2rem, 5vw, 3rem); /* scales between 2rem and 3rem */
 }
 
 h2 {
-  font-size: 2.5rem; /* Increased from 2rem */
-  color: var(--primary-color);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
 
 h3 {
-  font-size: 2rem; 
-   font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
 }
 
 p {
-  font-size: 1.125rem; /* Increased from 1rem */
+  font-size: clamp(1rem, 2vw, 1.125rem); /* scales from 1rem to 1.125rem */
 }
+
  .links{
   color: var(--text-muted);
   text-decoration: none;
@@ -172,7 +171,7 @@ p {
 
 .button,
 .inverseButton {
-  font-size: 1rem; 
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   font-weight: 500;
 }
 
