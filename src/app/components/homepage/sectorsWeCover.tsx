@@ -37,8 +37,8 @@ export default function SectorsWeCover() {
   }, []);
 
   return (
-    <div className="containerDiv flex flex-col items-center justify-center gap-20">
-      <div className="text-center flex flex-col items-center w-full max-w-[800px]">
+    <div className="containerDiv flex flex-col items-center justify-center ">
+      <div className="text-center mb-20 flex flex-col items-center w-full max-w-[800px]">
         <div className="LocumTag mb-6 flex flex-row items-center">
           <Image
             src="/images/doctorStuff.png"
@@ -50,14 +50,14 @@ export default function SectorsWeCover() {
           <span>Who Can Join MployUs Locums</span>
         </div>
 
-        <p className="text-base">
+        <p className="text-[var(--text-dark)]">
           MployUs Locum connects certified healthcare professionals with flexible
           shifts at trusted hospitals and clinics. If you&apos;re qualified and
           passionate about care, join us today.
         </p>
       </div>
-
-      <div className="w-full overflow-x-auto scrollbar-hide" ref={containerRef}>
+      <p className="text-[var(--text-dark)] mb-10 w-full text-start">We welcome applications from:</p>
+      <div className="w-full  items-center overflow-x-auto scrollbar-hide" ref={containerRef}>
         <div className="flex gap-10 w-max">
           {services.map((service, index) => (
             <div key={index}>

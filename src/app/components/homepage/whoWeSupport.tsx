@@ -4,17 +4,19 @@ export default function WhoWeSupport() {
   return (
     <div className="containerDiv flex flex-col lg:flex-row items-center justify-between lg:gap-30 gap-10 px-4 py-10">
       {/* Image Section */}
-      <div className="w-full lg:w-4/10 relative h-[400px]">
+      <div className="w-full lg:w-[40%] relative aspect-[4/3]">
         <Image
           src="/images/doctor-standing-hospital-premises1.png"
           alt="Who We Support"
           fill
-          className="object-contain rounded-lg"
+          className="object-cover rounded-lg"
+          sizes="(max-width: 768px) 100vw, 40vw"
+          priority
         />
       </div>
 
       {/* Text Section */}
-      <div className="w-full lg:w-6/10 flex flex-col items-start py-6 sm:py-10">
+      <div className="w-full lg:w-[60%] flex flex-col items-start py-6 sm:py-10">
         <div className="LocumTag mb-6 flex flex-row items-center">
           <Image
             src="/images/doctorStuff.png"

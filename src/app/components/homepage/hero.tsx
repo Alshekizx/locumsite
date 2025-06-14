@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="w-full lg:w-2/5 h-full flex items-center relative">
         {/* Floating card */}
         <div
-          className="flex flex-row items-center gap-3 card absolute left-[-75px] top-[-35px] p-4 z-10"
+          className="flex flex-row items-center gap-3 card absolute left-[-25px] md:left-[-50px] lg:left-[-75px] top-[-35px] p-4 z-10"
           style={{ padding: "10px 20px" }}
         >
           <BriefcaseIcon className="w-8 h-8 text-[var(--primary-color)]" />

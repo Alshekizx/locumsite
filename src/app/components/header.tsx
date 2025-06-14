@@ -19,6 +19,7 @@ export default function Header() {
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const [isHrDropdownOpen, setIsHrDropdownOpen] = useState(false);
   const hrDropdownRef = useRef<HTMLDivElement | null>(null);
+  const mobileToggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
  const { isLoggedIn, logout } = useAuth();
 
@@ -27,33 +28,36 @@ export default function Header() {
 
   // Close dropdown on outside click
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-          if (
-            dropdownRef.current &&
-            !dropdownRef.current.contains(event.target as Node)
-          ) {
-            setIsDropdownOpen(false);
-          }
+      const handleClickOutside = (event: MouseEvent) => {
+        const target = event.target as Node;
 
-          if (
-            mobileMenuRef.current &&
-            !mobileMenuRef.current.contains(event.target as Node)
-          ) {
-            setIsMobileMenuOpen(false);
-          }
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(target)
+        ) {
+          setIsDropdownOpen(false);
+        }
 
-          if (
-            hrDropdownRef.current &&
-            !hrDropdownRef.current.contains(event.target as Node)
-          ) {
-            setIsHrDropdownOpen(false);
-          }
-        };
-        console.log('', isHrDropdownOpen);
+        if (
+          mobileMenuRef.current &&
+          !mobileMenuRef.current.contains(target) &&
+          mobileToggleButtonRef.current &&
+          !mobileToggleButtonRef.current.contains(target)
+        ) {
+          setIsMobileMenuOpen(false);
+        }
 
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-      }, []);
+        if (
+          hrDropdownRef.current &&
+          !hrDropdownRef.current.contains(target)
+        ) {
+          setIsHrDropdownOpen(false);
+        }
+      };
+
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
   const UserIcon = () =>
     isLoggedIn ? (
@@ -109,6 +113,7 @@ export default function Header() {
 
 const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
   const pathname = usePathname();
+  
 
   const isActive = (path: string) => pathname === path;
 
@@ -159,18 +164,23 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       >
         Blog
       </Link>
+      <div className="lg:hidden md:hidden sm:flex text-[var(--text-muted)] text-lg">
+            <UserIcon />
+        </div>
     </>
   );
 };
 
 
   return (
-    <header className="bg-[var(--header-color)] text-[var(--text-dark)] border-b border-[var(--border-color)] fixed top-0 w-full z-50">
+    <header className="bg-[var(--header-color)] text-[var(--text-dark)] fixed top-0 w-full z-50">
       <div className="px-4 py-4 flex justify-between items-center">
         {/* Logo and Icons */}
-        <div className="flex items-center ">
-          <HomeIcon className="h-8 w-8 text-[var(--primary-color)]" />
-          <ChevronRightIcon className="h-6 w-6 mr-1 text-[var(--text-muted)]" />
+        <div className="flex items-center gap-2 ">
+          <div className='hidden lg:flex items-center gap-1'>
+            <HomeIcon className="h-8 w-8 text-[var(--primary-color)]" />
+            <ChevronRightIcon className="h-8 w-6 text-[var(--text-muted)]" />
+          </div>
           <Link href="/" className="flex items-center w-30">
             <Image
               src="/logos/MployusLocumsLogo1.png"
@@ -183,12 +193,10 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         </div>
 
         {/* User Icon & Mobile Menu Toggle */}
-        <div className="flex items-center space-x-1">
-          <div className="lg:hidden md:hidden sm:flex text-[var(--text-muted)] text-lg">
-            <UserIcon />
-          </div>
+        <div className="flex items-center space-x-1 z-50 relative">
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            ref={mobileToggleButtonRef}
+            onClick={() => setIsMobileMenuOpen(prev => !prev)}
             className="md:hidden text-[var(--text-muted)]"
             aria-label="Toggle Menu"
           >
