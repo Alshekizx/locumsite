@@ -48,7 +48,7 @@ export default function AnotherHrSectionInverse({
               alt={title || 'Section Image'}
               width={600}
               height={600}
-              className="w-full h-full object-contain "
+              className="w-full h-full object-cover"
             />
           )}
         </div>

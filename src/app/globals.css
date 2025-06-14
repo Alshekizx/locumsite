@@ -294,6 +294,7 @@ p {
   padding: 2rem 5rem;
   min-height: 50vh;
   width: 100%;
+  max-width: 1400px;
   
 }
 

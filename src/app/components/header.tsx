@@ -173,7 +173,8 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
 
   return (
-    <header className="bg-[var(--header-color)] text-[var(--text-dark)] fixed top-0 w-full z-50">
+    <header className="bg-[var(--header-color)] text-[var(--text-dark)] fixed top-0 w-full z-50 flex flex-col items-center">
+      <div className='max-w-[1400px] w-full'>
       <div className="px-4 py-4 flex justify-between items-center">
         {/* Logo and Icons */}
         <div className="flex items-center gap-2 ">
@@ -226,6 +227,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
           <NavLinks closeMenu={() => setIsMobileMenuOpen(false)} />
         </div>
       )}
+      </div>
     </header>
    
   );

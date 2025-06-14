@@ -22,8 +22,9 @@ export default function HeroSection({
   backgroundClassName = 'bg-[var(--primary-color)] card-texture-bg',
 }: HeroSectionProps) {
   return (
-    <div
-      className={`relative  w-full flex flex-col items-center justify-center pt-20 px-4 h-80 text-white text-center ${backgroundClassName}`}
+    <div className={`flex flex-col items-center w-full ${backgroundClassName}`}>
+      <div
+      className={`relative max-w-[1400px]  w-full flex flex-col items-center justify-center pt-20 px-4 h-80 text-white text-center `}
     >
       {breadcrumbs.length > 0 && (
         <div className="absolute top-16 left-6 flex items-center gap-1 text-sm">
@@ -48,6 +49,7 @@ export default function HeroSection({
       <p className="max-w-[700px]" style={{ color: 'white' }}>
         {description}
       </p>
+    </div>
     </div>
   );
 }

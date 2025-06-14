@@ -98,7 +98,8 @@ const LocumShift = () => {
       };
 
   return (
-    <div className="flex flex-col gap-6 containerDiv mt-20">
+    <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col gap-6 containerDiv mt-20">
       <div className="relative flex bg-hero-locum flex-col gap-6 h-fit lg:h-70 bg-black py-16 px-10">
         <div className="absolute z-0 inset-0 bg-[#000000bb]"></div>
         <span className='text-center z-10 text-white'>Find Your Next Healthcare Shift</span>
@@ -189,6 +190,7 @@ const LocumShift = () => {
         </StickyBox>
         </div>
       </div>
+    </div>
     </div>
   );
 };

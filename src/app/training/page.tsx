@@ -34,8 +34,8 @@ const Training = () => {
   
   
   return (
-    <div className="flex flex-col gap-6  mt-16">
-        <div className="relative flex bg-hero-locum flex-col gap-6 h-100 bg-black py-20 px-10">
+    <div className="flex flex-col items-center gap-6  mt-16">
+        <div className="relative flex bg-hero-locum flex-col gap-6 h-100 w-full bg-black py-20 px-10">
         <div className="absolute z-0 inset-0 bg-[#000000bb]"></div>
         <div className="z-10 max-w-xl mx-auto flex flex-col items-center justify-center gap-6">
             <div className="LocumTag  " style={{  backgroundColor:"transparent"}} ><span>Locum Training Programs</span></div>

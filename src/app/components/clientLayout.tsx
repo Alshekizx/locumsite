@@ -18,7 +18,8 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   return (
     <>
       <Header />
-      {children}
+      <div>{children}</div>
+      
       <Footer />
     </>
   );
