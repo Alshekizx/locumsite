@@ -17,7 +17,7 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-  const [isHrDropdownOpen, setIsHrDropdownOpen] = useState(false);
+  const [, setIsHrDropdownOpen] = useState(false);
   const hrDropdownRef = useRef<HTMLDivElement | null>(null);
   const mobileToggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
