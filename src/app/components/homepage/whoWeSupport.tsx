@@ -25,10 +25,10 @@ export default function WhoWeSupport() {
             height={24}
             className="inline-block mr-2"
           />
-          <p className="font-semibold text-[var(--primary-color)]">About MployUs Locums</p>
+          <p className="pll font-semibold text-[var(--primary-color)]">About MployUs Locums</p>
         </div>
 
-        <p className="text-[var(--text-muted)] leading-relaxed text-base">
+        <p className="p11 text-[var(--text-muted)] leading-relaxed text-base">
           At MployUs Locums, we connect healthcare professionals with flexible,
           reliable shift opportunities at trusted medical facilities. Whether
           you&apos;re a nurse, doctor, pharmacist, or allied health worker, our
@@ -36,7 +36,7 @@ export default function WhoWeSupport() {
           terms.
         </p>
 
-        <p className="text-[var(--text-muted)] leading-relaxed mt-4 text-base">
+        <p className="p11 text-[var(--text-muted)] leading-relaxed mt-4 text-base">
           For small Irish businesses with 1 to 50 employees, our expert consultants 
           offer hands-on support to address HR challenges and stay legally compliant. 
           We are committed to empowering small businesses with customised HR solutions 

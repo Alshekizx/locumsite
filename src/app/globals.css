@@ -127,28 +127,33 @@ body {
 
 
 
-h1, h2 {
-  font-weight: 500;
+h1, h2{
+  
   line-height: 1.2;
+  color: var(--text-dark);
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem); /* scales between 2rem and 3rem */
+  font-size: 50px; /* 3rem */
 }
 
 h2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: 40px; /* 2.5rem */
+  color: var(--primary-color);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 400;
+  font-size: 34px; /* 2rem */
+ 
 }
 
 p {
-  font-size: clamp(1rem, 2vw, 1.125rem); /* scales from 1rem to 1.125rem */
+  font-size: 20px; /* 1.125rem */
 }
 
+.pll {
+  font-size: 18px; /* 1.125rem */
+}
  .links{
   color: var(--text-muted);
   text-decoration: none;

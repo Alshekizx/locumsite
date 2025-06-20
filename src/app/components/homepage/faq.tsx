@@ -101,10 +101,10 @@ const FaqAccordion = () => {
             return (
               <div
                 key={index}
-                className={`rounded-lg p-6 border border-[var(--border-color)] transition-all duration-300 ${
+                className={`rounded-lg p-6  transition-all duration-300 ${
                   isOpen
                     ? "bg-[var(--primary-color)] text-white"
-                    : "bg-[var(--card-bg)] text-[var(--text-dark)]"
+                    : "bg-[var(--primary-100)] text-[var(--text-dark)]"
                 }`}
               >
                 <div
@@ -115,7 +115,7 @@ const FaqAccordion = () => {
                   <div
                     className="rounded-lg p-2"
                     style={{
-                      backgroundColor: "var(--primary-100)",
+                      backgroundColor: "var(--primary-200)",
                     }}
                   >
                     {isOpen ? (

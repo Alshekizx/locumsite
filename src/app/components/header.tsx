@@ -100,12 +100,12 @@ export default function Header() {
       <div className='flex flex-row items-center gap-1'>
         <Link href="/auth/signup" >
         <div className=" inverseButton" style={{borderRadius:"5px", borderWidth:' 1.5px',padding: '5px 10px', borderColor: 'var(--secondary-200),', color: 'var(--secondary-400)'}}>
-        Register
+     <p className='.pll'>Register</p>  
         </div>
       </Link>
         <Link href="/auth/login" >
         <div className=" button" style={{ borderRadius:"5px", borderWidth:' 1.5px',padding: '5px 10px'}}>
-          Login
+          <p className='.pll'>Login</p>
           </div>
         </Link>
       </div>
@@ -123,7 +123,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
   return (
     <>
       <Link href="/" className={linkClass('/')} onClick={closeMenu}>
-        Home
+        <p className='.pll'>Home</p>
       </Link>
 
     <Link
@@ -131,7 +131,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         className={linkClass('/locumShifts')}
         onClick={closeMenu}
       >
-        Locum Shifts
+       <p className='.pll'>Locum Shifts</p> 
       </Link>
 
       <Link
@@ -139,14 +139,14 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         className={linkClass('/permanentJobs')}
         onClick={closeMenu}
       >
-       Permanent Jobs
+       <p className='.pll'>Permanent Jobs</p>
       </Link>
       <Link
         href="/employersTabs"
         className={linkClass('/employersTabs')}
         onClick={closeMenu}
       >
-        Employers
+       <p className='.pll'> Employers</p>
       </Link>
 
     <Link
@@ -154,7 +154,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       className={linkClass('/training')}
       onClick={closeMenu}
     >
-      Training
+      <p className='.pll'>Training</p>
     </Link>
 
       <Link
@@ -162,7 +162,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         className={linkClass('/blog')}
         onClick={closeMenu}
       >
-        Blog
+        <p className='.pll'>Blog</p>
       </Link>
       <div className="lg:hidden md:hidden sm:flex text-[var(--text-muted)] text-lg">
             <UserIcon />
@@ -179,16 +179,16 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
         {/* Logo and Icons */}
         <div className="flex items-center gap-2 ">
           <div className='hidden lg:flex items-center gap-1'>
-            <HomeIcon className="h-8 w-8 text-[var(--primary-color)]" />
-            <ChevronRightIcon className="h-8 w-6 text-[var(--text-muted)]" />
+            <HomeIcon className="h-10 w-10 text-[var(--primary-color)]" />
+            <ChevronRightIcon className="h-8 w-8 text-[var(--text-muted)]" />
           </div>
-          <Link href="/" className="flex items-center w-30">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logos/MployusLocumsLogo1.png"
               alt="Logo"
-              width={120}
-              height={120}
-              className="w-full"
+              width={186}
+              height={55}
+              className=""
             />
           </Link>
         </div>
