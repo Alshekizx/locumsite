@@ -37,8 +37,8 @@ export default function ForJobSeeker() {
 
 const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
   return (
-    <div className="flex flex-col items-center">
-      <div className="pt-20 containerDiv flex flex-col gap-16">     
+    <div className="flex pt-30 flex-col items-center">
+      <div className=" containerDiv flex flex-col gap-16">     
     <div className="">
         <CountryFilter
           selectedCountry={selectedCountry}

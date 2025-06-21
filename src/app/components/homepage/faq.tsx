@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { PlusIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -136,6 +137,9 @@ const FaqAccordion = () => {
               </div>
             );
           })}
+        </div>
+          <div>
+          <Link className=" " href="/faqPage"><p className="text-primary mt-10 hover:underline" style={{fontSize:'24px'}}>View More</p></Link>
         </div>
       </div>
     </section>
