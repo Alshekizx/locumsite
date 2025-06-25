@@ -1,8 +1,8 @@
 'use client';
 import React from "react";
-import TrainingCard from "../components/ourHrServiceComponent/trainingCard";
-import FocusedPharmacy from "../components/ourHrServiceComponent/focusedPham";
-import ContactForm from "../components/homepage/contactUs";
+import TrainingCard from "../../components/ourHrServiceComponent/trainingCard";
+import FocusedPharmacy from "../../components/ourHrServiceComponent/focusedPham";
+import ContactForm from "../../components/homepage/contactUs";
 
 
  const hrData5 = {

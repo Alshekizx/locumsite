@@ -27,7 +27,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
     <Link
-      href={`/blog/${slug}`}
+      href={`/views/blog/${slug}`}
       className="block w-full h-full rounded-lg overflow-hidden border border-[var(--border-color)] bg-[var(--card-bg)] hover:shadow-md transition-shadow"
     >
       {/* Thumbnail + Category Badge */}

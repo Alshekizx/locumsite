@@ -139,7 +139,7 @@ const FaqAccordion = () => {
           })}
         </div>
           <div>
-          <Link className=" " href="/faqPage"><p className="text-primary mt-10 hover:underline" style={{fontSize:'24px'}}>View More</p></Link>
+          <Link className=" " href="/views/faqPage"><p className="text-primary mt-10 hover:underline" style={{fontSize:'24px'}}>View More</p></Link>
         </div>
       </div>
     </section>

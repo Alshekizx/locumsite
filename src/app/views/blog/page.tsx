@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import BlogCard from '../components/blogComponent/blogCard';
+import BlogCard from '../../components/blogComponent/blogCard';
 import { blogData } from './blogSampleData';
-import HeroSection from '../components/ourHrServiceComponent/heroSection';
-import CountryFilter from '../components/permanentJobsComponent/CountryFilter';
+import HeroSection from '../../components/ourHrServiceComponent/heroSection';
+import CountryFilter from '../../components/permanentJobsComponent/CountryFilter';
 
 
 const sideFilters = [

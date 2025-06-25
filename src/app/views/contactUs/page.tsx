@@ -7,7 +7,7 @@ import {
   EnvelopeIcon,
 } from '@heroicons/react/20/solid';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa6';
-import HeroSection from '../components/ourHrServiceComponent/heroSection';
+import HeroSection from '../../components/ourHrServiceComponent/heroSection';
 
 const ContactUs = () => {
   const [message, setMessage] = useState('');

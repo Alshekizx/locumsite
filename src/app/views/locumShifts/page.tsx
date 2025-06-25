@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from "react";
-import LocumJobCardItem from "../components/permanentJobsComponent/locumJobCard";
-import LocumJobDetailView from "../components/permanentJobsComponent/LocumJobDetailView";
-import { LocumJobs, LocumJob } from "../components/permanentJobsComponent/locumJobData";
-import CountryFilter from "../components/permanentJobsComponent/CountryFilter";
-import FindAShiftFilter from "../components/permanentJobsComponent/findAShiftFilter";
-import Pagination from "../components/pagination";
+import LocumJobCardItem from "@/app/components/permanentJobsComponent/locumJobCard";
+import LocumJobDetailView from "@/app/components/permanentJobsComponent/LocumJobDetailView";
+import { LocumJobs, LocumJob } from "../../components/permanentJobsComponent/locumJobData";
+import CountryFilter from "../../components/permanentJobsComponent/CountryFilter";
+import FindAShiftFilter from "../../components/permanentJobsComponent/findAShiftFilter";
+import Pagination from "../../components/pagination";
 import StickyBox from 'react-sticky-box';
 
 const LocumShift = () => {
@@ -182,7 +182,7 @@ const LocumShift = () => {
           
         {/* Job Detail */}
         <div className="md:w-1/2">
-          <StickyBox offsetTop={60} offsetBottom={0}>
+          <StickyBox offsetTop={65} offsetBottom={0}>
         {/* Job Detail */}
         
           {selectedJob && <LocumJobDetailView job={selectedJob} />}

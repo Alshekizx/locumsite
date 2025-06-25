@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import Image from 'next/image';
 import { ChevronLeftIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 
 const countryCodeMap: Record<string, string> = {
   "Republic of Ireland": "ie",
@@ -134,7 +135,6 @@ export default function EmployersTabs() {
     }
   });
 };
-  const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
 const stepIndicator = (current: number) => {
   return (
@@ -192,25 +192,24 @@ const stepIndicator = (current: number) => {
 };
 
   return (
-     <main className="min-h-screen grid grid-cols-1 pt-16 md:grid-cols-2">
+     <main className="min-h-screen grid grid-cols-1  md:grid-cols-2">
       {/* Left side */}
       <div className="relative bg-[var(--primary-color)] min-h-50 flex items-center justify-center p-6 card-texture-bg2"
       
       >
         <div className="absolute top-6 left-6">
-          <button
-            onClick={prevStep}
+          <Link
+            href="/views/"
             className="inverseButton flex items-center gap-1"
             style={{
               borderRadius: 0,
               borderWidth: '1.5px',
               borderColor: 'white',
               color: 'white'
-            }}
-          >
+            }}          >
             <ChevronLeftIcon className="w-4 h-4 text-white" />
             Back
-          </button>
+          </Link>
         </div>
         <Image
           src="/logos/WhiteMployusRecruitmentLogo2.png"
@@ -222,7 +221,7 @@ const stepIndicator = (current: number) => {
       </div>
 
       {/* Right side */}
-      <div className="w-full p-10 flex flex-col items-center " >
+      <div className="w-full p-10 flex flex-col items-center h-screen overflow-y-auto " >
        {stepIndicator(step)}
        <AnimatePresence mode="wait">
          <motion.div

@@ -1,12 +1,12 @@
 'use client';
 import { useState } from "react";
-import { Job, sampleJobs } from "../components/permanentJobsComponent/sampleData";
-import JobFilter2 from "../components/permanentJobsComponent/jobFilter";
-import JobCard from "../components/permanentJobsComponent/jobCard";
-import JobApplicationDetail from "../components/permanentJobsComponent/jobApplicationDetails";
-import type { FilterOptions } from "../components/permanentJobsComponent/jobFilter"; 
+import { Job, sampleJobs } from "../../components/permanentJobsComponent/sampleData";
+import JobFilter2 from "../../components/permanentJobsComponent/jobFilter";
+import JobCard from "../../components/permanentJobsComponent/jobCard";
+import JobApplicationDetail from "../../components/permanentJobsComponent/jobApplicationDetails";
+import type { FilterOptions } from "../../components/permanentJobsComponent/jobFilter"; 
 import StickyBox from 'react-sticky-box';
-import CountryFilter from "../components/permanentJobsComponent/CountryFilter";
+import CountryFilter from "../../components/permanentJobsComponent/CountryFilter";
 
 
 
@@ -48,7 +48,7 @@ const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
       </div>
         <div className="flex flex-row gap-10 min-h-[1000px]">
           <div className="hidden lg:block w-1/3" >
-            <StickyBox offsetTop={40} offsetBottom={0}>
+            <StickyBox offsetTop={100} offsetBottom={0}>
               <div>
                 <JobFilter2
                   filters={filters}

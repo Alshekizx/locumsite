@@ -1,13 +1,13 @@
 "use client";
 
 import { ArrowLeftIcon, TrashIcon, PencilIcon } from "@heroicons/react/20/solid";
-import { sampleUserProfile } from "../components/userSampleData";
+import { sampleUserProfile } from "../../components/userSampleData";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FaFilePdf } from "react-icons/fa";
-import EditProfileModal from "../components/editProfileModal";
-import ChangePasswordModal from "../components/ChangePasswordModal";
+import EditProfileModal from "../../components/editProfileModal";
+import ChangePasswordModal from "../../components/ChangePasswordModal";
 
 export default function MyProfile() {
   const {

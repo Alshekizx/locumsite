@@ -77,13 +77,13 @@ export default function Header() {
         {isDropdownOpen && (
           <div className="absolute right-0 mt-2 w-40 bg-[var(--header-color)] border rounded shadow-lg z-50 text-sm">
             <Link
-              href="/myApplications"
+              href="/views/myApplications"
               className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
             >
               My Applications
             </Link>
             <Link
-              href="/myProfile"
+              href="/views/myProfile"
               className="block px-4 py-2 hover:text-[var(--primary-color)] text-[var(--text-dark)]"
             >
               My Profile
@@ -122,12 +122,12 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
 
   return (
     <>
-      <Link href="/" className={linkClass('/')} onClick={closeMenu}>
+      <Link href="/views/" className={linkClass('/')} onClick={closeMenu}>
         <p className='.pll'>Home</p>
       </Link>
 
     <Link
-        href="/locumShifts"
+        href="/views/locumShifts"
         className={linkClass('/locumShifts')}
         onClick={closeMenu}
       >
@@ -135,31 +135,31 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
       </Link>
 
       <Link
-        href="/permanentJobs"
-        className={linkClass('/permanentJobs')}
+        href="/views/permanentJobs"
+        className={linkClass('/views/permanentJobs')}
         onClick={closeMenu}
       >
        <p className='.pll'>Permanent Jobs</p>
       </Link>
       <Link
-        href="/employersTabs"
-        className={linkClass('/employersTabs')}
+        href="/views/employersTabs"
+        className={linkClass('/views/employersTabs')}
         onClick={closeMenu}
       >
        <p className='.pll'> Employers</p>
       </Link>
 
     <Link
-      href="/training"
-      className={linkClass('/training')}
+      href="/views/training"
+      className={linkClass('/views/training')}
       onClick={closeMenu}
     >
       <p className='.pll'>Training</p>
     </Link>
 
       <Link
-        href="/blog"
-        className={linkClass('/blog')}
+        href="/views/blog"
+        className={linkClass('/views/blog')}
         onClick={closeMenu}
       >
         <p className='.pll'>Blog</p>
@@ -182,7 +182,7 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
             <HomeIcon className="h-10 w-10 text-[var(--primary-color)]" />
             <ChevronRightIcon className="h-8 w-8 text-[var(--text-muted)]" />
           </div>
-          <Link href="/" className="flex items-center">
+          <Link href="/view/" className="flex items-center">
             <Image
               src="/logos/MployusLocumsLogo1.png"
               alt="Logo"

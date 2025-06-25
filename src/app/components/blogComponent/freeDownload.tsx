@@ -30,7 +30,7 @@ const FreeDownloadCard: React.FC<BlogCardProps> = ({
 }) => {
   return (
    <Link
-        href={`/blog/${slug}`}
+        href={`/views/blog/${slug}`}
         className="block w-full rounded-tl-[100] overflow-hidden border border-[var(--border-color)] bg-[var(--card-bg)] hover:shadow-md transition-shadow"
         >
       {/* Thumbnail + Category Badge */}

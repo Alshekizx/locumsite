@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { sampleJobs } from "@/app/components/permanentJobsComponent/sampleData";
-import ApplySection from "../../../components/applyCard";
+import ApplySection from "../../../../components/applyCard";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { DocumentArrowUpIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
@@ -91,7 +91,7 @@ const ApplyPage = () => {
       {/* Apply Button */}
       <button
   className="w-full button"
-  onClick={() => router.push("/permanentJobs/apply/success")}
+  onClick={() => router.push("/views/permanentJobs/apply/success")}
 >
   Apply
 </button>

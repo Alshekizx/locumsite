@@ -49,12 +49,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/" className="footerLinks">Home</Link></li>
-            <li><Link href="/ourHrServices" className="footerLinks">Our HR Services</Link></li>
-            <li><Link href="/ourHrExperties" className="footerLinks">Our HR Expertise</Link></li>
-            <li><Link href="/blog" className="footerLinks">Prices</Link></li>
-            <li><Link href="/blog" className="footerLinks">Blog</Link></li>
-            <li><Link href="/contactUs" className="footerLinks">Contact Us</Link></li>
+            <li><Link href="/views/" className="footerLinks">Home</Link></li>
+            <li><Link href="/views/ourHrServices" className="footerLinks">Our HR Services</Link></li>
+            <li><Link href="/views/ourHrExperties" className="footerLinks">Our HR Expertise</Link></li>
+            <li><Link href="/views/blog" className="footerLinks">Prices</Link></li>
+            <li><Link href="/views/blog" className="footerLinks">Blog</Link></li>
+            <li><Link href="/views/contactUs" className="footerLinks">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -88,17 +88,17 @@ const Footer = () => {
           <h4 className="font-semibold mb-4">Legal</h4>
           <ul className="space-y-2 text-sm">
            <li>
-    <Link href="/privacyPolicy" className="hover:underline">
+    <Link href="/views/privacyPolicy" className="hover:underline">
       Privacy Statement
     </Link>
   </li>
   <li>
-    <Link href="/termsAndConditions" className="hover:underline">
+    <Link href="/views/termsAndConditions" className="hover:underline">
       Terms and Conditions
     </Link>
   </li>
   <li>
-    <Link href="/cookiesPolicy" className="hover:underline">
+    <Link href="/views/cookiesPolicy" className="hover:underline">
       Cookies Policy
     </Link>
   </li>

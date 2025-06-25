@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import HeroSection from '../components/ourHrServiceComponent/heroSection';
+import HeroSection from '../../components/ourHrServiceComponent/heroSection';
 import { useState } from "react";
 import { PlusIcon, XMarkIcon } from "@heroicons/react/24/solid";
 

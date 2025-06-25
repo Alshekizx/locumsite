@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import './globals.css'
 import { Nunito } from 'next/font/google'
 import { AuthProvider } from "./context/authContext";
-import ClientLayout from "./components/clientLayout";
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -27,7 +26,7 @@ export default function RootLayout({
     <AuthProvider>
       <html lang="en">
         <body className={`${nunito.variable} antialiased`}>
-          <ClientLayout>{children}</ClientLayout>
+         {children}
         </body>
       </html>
     </AuthProvider>

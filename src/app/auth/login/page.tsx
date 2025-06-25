@@ -20,7 +20,7 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen grid grid-cols-1 pt-16 md:grid-cols-2">
+    <main className="min-h-screen grid grid-cols-1 md:grid-cols-2">
       {/* Left side */}
       <div className="relative bg-[var(--primary-color)] flex items-center justify-center p-6 card-texture-bg2"
       
