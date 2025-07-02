@@ -9,9 +9,9 @@ const Footer = () => {
     <footer className=" flex flex-col items-center  bg-[var(--primary-color)] text-white pt-12 pb-8 px-4"
       style={{
     backgroundImage: `url('/images/Patterns1.png'), url('/images/Patterns2.png')`,
-      backgroundPosition: 'left top, right bottom',
+      backgroundPosition: 'left bottom, right top',
       backgroundRepeat: 'no-repeat, no-repeat',
-      backgroundSize: 'auto 100%, auto 100%',
+      backgroundSize: 'auto 100%, auto 70%',
     }}
     >
       <div className='containerDiv'>
