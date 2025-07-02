@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import {
   Bars3Icon,
-  HomeIcon,
   ChevronRightIcon,
 } from '@heroicons/react/24/outline';
 import { useAuth } from '../context/authContext';
@@ -175,20 +174,26 @@ const NavLinks = ({ closeMenu }: { closeMenu?: () => void }) => {
   return (
     <header className="bg-[var(--header-color)] text-[var(--text-dark)] fixed top-0 w-full z-50 flex flex-col items-center">
       <div className='max-w-[1400px] w-full'>
-      <div className="px-4 py-4 flex justify-between items-center">
+      <div className="px-[2rem] lg:px-[5rem] py-4 flex justify-between items-center">
         {/* Logo and Icons */}
-        <div className="flex items-center gap-2 ">
-          <div className='hidden lg:flex items-center gap-1'>
-            <HomeIcon className="h-10 w-10 text-[var(--primary-color)]" />
-            <ChevronRightIcon className="h-8 w-8 text-[var(--text-muted)]" />
-          </div>
-          <Link href="/view/" className="flex items-center">
+        <div className="flex items-center space-x-2">
+          <div className='hidden md:flex flex-row gap-2 items-center'>
+          <Image
+              src="/images/home3.png"
+              alt="Logo"
+              width={31}
+              height={34}
+              className="h-full"
+            />
+          <ChevronRightIcon className="h-10 w-10  text-[var(--text-muted)]" />
+         </div>
+           <Link href="/views/" className="flex items-center ">
             <Image
               src="/logos/MployusLocumsLogo1.png"
               alt="Logo"
               width={186}
-              height={55}
-              className=""
+              height={56}
+              className="h-[56px]"
             />
           </Link>
         </div>
