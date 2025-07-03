@@ -89,7 +89,7 @@ const BlogIndexPage = () => {
         <div className="flex w-full px-4 gap-8">
           {/* Side Filters */}
           <aside className="hidden pt-16 lg:block w-1/4">
-            <div className="sticky top-20 space-y-2">
+            <div className="sticky top-26 space-y-2">
               {sideFilters.map((filter) => (
                 <button
                   key={filter}

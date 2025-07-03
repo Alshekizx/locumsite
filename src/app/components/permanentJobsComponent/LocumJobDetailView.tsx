@@ -8,12 +8,15 @@ import {
   CurrencyDollarIcon,
   ShareIcon,
 } from '@heroicons/react/24/solid';
+import { useRouter } from "next/navigation";
+
 
 interface Props {
   job: LocumJob;
 }
 
 const LocumJobDetailView: React.FC<Props> = ({ job }) => {
+  const router = useRouter();
   return (
     <div className="p-6 overflow-y-auto scrollbar-hide h-[85vh] rounded-md bg-white space-y-6">
       {/* Job Title and Header */}
@@ -94,6 +97,7 @@ const LocumJobDetailView: React.FC<Props> = ({ job }) => {
         {/* Apply Button */}
        <div className="flex justify-end mt-2">
           <button
+          onClick={() => router.push(`/views/permanentJobs/apply/${job.jobId}`)}
             className="button w-full lg:w-1/2"
             style={{ borderRadius: '10px' }}
           >

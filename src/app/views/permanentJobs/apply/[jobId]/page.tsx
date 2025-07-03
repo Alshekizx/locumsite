@@ -1,22 +1,31 @@
-'use client'; // ⬅️ Required for using useState and other hooks
+// File: locum/src/app/views/permanentJobs/apply/[jobId]/page.tsx
+'use client';
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import { useParams } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { sampleJobs } from "@/app/components/permanentJobsComponent/sampleData";
-import ApplySection from "../../../../components/applyCard";
+import { LocumJobs } from "@/app/components/permanentJobsComponent/locumJobData"; 
+import ApplySection from "@/app/components/applyCard";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { DocumentArrowUpIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { Job } from "@/app/components/permanentJobsComponent/sampleData";
 
 const ApplyPage = () => {
   const params = useParams();
   const jobId = params?.jobId as string;
-  const job = sampleJobs.find((j) => j.jobId === jobId);
   const router = useRouter();
 
   const [resumeName, setResumeName] = useState<string | null>(null);
   const [coverLetterName, setCoverLetterName] = useState<string | null>(null);
+
+  const permanentJob = sampleJobs.find((j) => j.jobId === jobId);
+  const locumJob = LocumJobs.find((j) => j.jobId === jobId);
+  const job = permanentJob || locumJob;
+
+  if (!job) {
+    return <div className="text-center py-20 text-xl">Job not found.</div>;
+  }
 
   const handleFileChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -27,17 +36,12 @@ const ApplyPage = () => {
     }
   };
 
-  if (!job) {
-    return <div className="text-center py-20 text-xl">Job not found.</div>;
-  }
-
   return (
-    <div className="max-w-2xl mx-auto px-4 py-20 space-y-8">
+    <div className="max-w-2xl mx-auto px-4 py-26 space-y-8">
       {/* Back Icon and Title */}
       <div className="flex items-center gap-2">
-
-        <Link href="/forJobSeeker" className="IconButton"> 
-        <ArrowLeftIcon className="w-5 h-5 text-[--color-primary]" />
+        <Link href="/views/forJobSeeker" className="IconButton">
+          <ArrowLeftIcon className="w-5 h-5 text-[--color-primary]" />
         </Link>
         <p className="text-lg font-medium">Apply</p>
       </div>
@@ -47,7 +51,7 @@ const ApplyPage = () => {
         <span className="block text-sm font-medium text-[--color-text-muted] mb-2">
           Job Description
         </span>
-        <ApplySection jobs={[job]} />
+        <ApplySection jobs={[job as Job]} />
       </div>
 
       {/* Resume Upload */}
@@ -90,11 +94,11 @@ const ApplyPage = () => {
 
       {/* Apply Button */}
       <button
-  className="w-full button"
-  onClick={() => router.push("/views/permanentJobs/apply/success")}
->
-  Apply
-</button>
+        className="w-full button"
+        onClick={() => router.push("/views/permanentJobs/apply/success")}
+      >
+        Apply
+      </button>
     </div>
   );
 };

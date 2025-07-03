@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BriefcaseIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -22,8 +23,8 @@ export default function Hero() {
         </h2>
 
         <div className="flex gap-4">
-          <button className="button">Browse Available Shifts</button>
-          <button className="inverseButton">Register as a Locum</button>
+          <Link href="/views/locumShifts" className="button">Browse Available Shifts</Link>
+          <Link href="/auth/signup" className="inverseButton">Register as a Locum</Link>
         </div>
       </div>
 

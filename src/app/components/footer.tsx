@@ -62,11 +62,11 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Our Services</h4>
           <ul className="space-y-2 text-sm">
-            <li>MployUs HR Advice</li>
-            <li>Recruitment Support</li>
-            <li>Locums Provision</li>
-            <li>HR Software & Mobile App</li>
-            <li>Locum Software & Mobile App</li>
+            <li><Link href="https://hr.mployus.ie/views" className="footerLinks">MployUs HR Advice</Link></li>
+            <li><Link href="https://recruitment.mployus.ie/views" className="footerLinks">Recruitment Support</Link></li>
+            <li><Link href="/views/training" className="footerLinks">Locums Provision</Link></li>
+            <li><Link href="https://mployus.ie/prices" className="footerLinks">HR Software & Mobile App</Link></li>
+            <li><Link href="https://mployus.ie/prices" className="footerLinks">Locum Software & Mobile App</Link></li>
           </ul>
         </div>
 
@@ -74,12 +74,12 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4">Our Products</h4>
           <ul className="space-y-2 text-sm">
-            <li>MployUs HR Software</li>
-            <li>Recruitment Software</li>
-            <li>MployUs Locums</li>
-            <li>HR Software & Mobile App</li>
-            <li>Locum Software & Mobile App</li>
-            <li>Finance Management Software</li>
+            <li><Link href="https://hr.mployus.ie/views" className="footerLinks">MployUs HR Software</Link></li>
+            <li><Link href="https://mployus.ie/recruitmentSoftware" className="footerLinks">Recruitment Software</Link></li>
+            <li><Link href="/views/training" className="footerLinks">MployUs Locums</Link></li>
+            <li><Link href="https://mployus.ie/hrSoftware" className="footerLinks">HR Software & Mobile App</Link></li>
+            <li><Link href="/views" className="footerLinks">Locum Software & Mobile App</Link></li>
+            <li><Link href="https://mployus.ie/financial" className="footerLinks">Finance Management Software</Link></li>
           </ul>
         </div>
 
@@ -140,10 +140,16 @@ const Footer = () => {
       
 
       <div className="mt-4">
-        <div className="bg-[#ffffff55] border border-white text-black px-10 py-2 rounded-md inline-flex items-center gap-2">
-          <span className="text-xl">🇮🇪</span>
-          <span>Ireland</span>
-          <ChevronDownIcon className="w-4 h-4 ml-1 text-black" />
+        <div className="relative w-fit">
+          <select
+            className="bg-[#ffffff55] border border-white text-black px-4 py-2 pr-10 rounded-md appearance-none cursor-pointer"
+            defaultValue="ireland"
+            onChange={(e) => console.log("Selected:", e.target.value)}
+          >
+            <option value="ireland">🇮🇪 Ireland</option>
+            <option value="uk">🇬🇧 United Kingdom</option>
+          </select>
+          <ChevronDownIcon className="w-4 h-4 absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-black" />
         </div>
 
         <p className='mt-2'>Download our HR Mobile App</p>
