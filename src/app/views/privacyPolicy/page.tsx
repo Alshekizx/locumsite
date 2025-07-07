@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
       </div>
 
       {/* Terms Content */}
-      <article className="containerDiv prose prose-lg max-w-full text-gray-900">
+      <article className="containerDiv prose prose-lg max-w-full text-gray-900 flex flex-col items-start gap-6">
         <h4 className="text-lg font-semibold">Introduction</h4>
         <p>
           This document outlines the privacy rights of Data Subjects as defined by the General Data Protection Regulation (GDPR), which pertains to living individuals. Privacy applies exclusively to non-public information, and GDPR governs the protection of such personal data.

@@ -84,7 +84,7 @@ const JobApplicationDetail: React.FC<JobApplicationDetailProps> = ({ job, onBack
       {/* Apply Button */}
       <div className="text-end">
 
-        <button  className="button w-full lg:w-1/2"
+        <button  className="bLocumJobDetailViewutton w-full lg:w-1/2"
             style={{ borderRadius: '10px' }} onClick={() => router.push(`/views/permanentJobs/apply/${job.jobId}`)}>
             Apply
           </button>
